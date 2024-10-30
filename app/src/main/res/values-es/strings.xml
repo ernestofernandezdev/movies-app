@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MoviesApp</string>
+    <string name="search_box_hint">Buscar película…</string>
+    <string name="search_btn">Buscar</string>
+    <string name="not_found">No se encontraron películas</string>
+</resources>
