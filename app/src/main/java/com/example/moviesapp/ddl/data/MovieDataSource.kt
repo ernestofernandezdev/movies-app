@@ -1,5 +1,6 @@
 package com.example.moviesapp.ddl.data
 
+import com.example.moviesapp.ddl.data.dto.GenresResultDTO
 import com.example.moviesapp.ddl.data.dto.MovieResultDTO
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -13,11 +14,33 @@ class MovieDataSource @Inject constructor(
         return withContext(Dispatchers.IO) {
             try {
                 val response = movieApi.getMovies()
-                println(response.message())
                 return@withContext response.body()
             }catch (e: Exception) {
                 e.printStackTrace()
-                println(e.message)
+                return@withContext null
+            }
+        }
+    }
+
+    suspend fun getGenres(): GenresResultDTO? {
+        return withContext(Dispatchers.IO) {
+            try {
+                val response = movieApi.getGenres()
+                return@withContext response.body()
+            }catch (e: Exception) {
+                e.printStackTrace()
+                return@withContext null
+            }
+        }
+    }
+
+    suspend fun getMoviesByName(title: String): MovieResultDTO? {
+        return withContext(Dispatchers.IO) {
+            try {
+                val response = movieApi.getMoviesByName(title)
+                return@withContext response.body()
+            }catch (e: Exception) {
+                e.printStackTrace()
                 return@withContext null
             }
         }

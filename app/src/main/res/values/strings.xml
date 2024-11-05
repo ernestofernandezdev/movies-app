@@ -3,4 +3,6 @@
     <string name="search_box_hint">Search for movies…</string>
     <string name="search_btn">Search</string>
     <string name="not_found">No movies were found</string>
+    <string name="rating">Rating:\u0020</string>
+    <string name="votes">\u0020- Votes:\u0020</string>
 </resources>

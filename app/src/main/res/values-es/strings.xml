@@ -4,4 +4,6 @@
     <string name="search_box_hint">Buscar película…</string>
     <string name="search_btn">Buscar</string>
     <string name="not_found">No se encontraron películas</string>
+    <string name="rating">Puntaje:\u0020</string>
+    <string name="votes">\u0020- Votos:\u0020</string>
 </resources>
